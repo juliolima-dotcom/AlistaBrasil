@@ -1,6 +1,7 @@
 package org.alistabrasil.models;
 
 public class Alistamento {
+
     private int idAlistamento;
     private String dataAlistamento;
     private String status;
@@ -28,13 +29,5 @@ public class Alistamento {
     }
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
-    }
-
-
-
-
-
-
-
-    
+    }   
 }

@@ -1,18 +1,18 @@
 package org.alistabrasil.models;
 
 public class Certificado {
-    private int idCertificado;
+    private String idCertificado;
     private String tipoCertificado;
     private String dataEmissao;
     private String codigoAutenticado;
 
-    public Certificado(int idCertificado, String tipoCertificado, String dataEmissao) {
+    public Certificado(String idCertificado, String tipoCertificado, String dataEmissao) {
         this.idCertificado = idCertificado;
         this.tipoCertificado = tipoCertificado;
         this.dataEmissao = dataEmissao;
     }
 
-    public int getIdCertificado() {
+    public String getIdCertificado() {
         return idCertificado;
     }
 

@@ -2,7 +2,7 @@ package org.alistabrasil.models;
 
 public class Usuario {
 
-    private int cpf;
+    private String cpf;
     private String nome;
     private String dataDeNascimento;
     private String email;
@@ -10,7 +10,7 @@ public class Usuario {
     private String telefone;
     private String endereco;
 
-    public Usuario(int cpf, String nome, String dataDeNascimento, String email, String senha) {
+    public Usuario(String cpf, String nome, String dataDeNascimento, String email, String senha) {
         this.cpf = cpf;
         this.nome = nome;
         this.dataDeNascimento = dataDeNascimento;
@@ -18,46 +18,71 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public int getCpf() {
+    public Usuario(String cpf, String senha){
+        this.cpf = cpf;
+        this.senha = senha;
+    }
+
+    public String getCpf() {
         return cpf;
     }
-    public void setCpf(int cpf) {
+
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public String getDataDeNascimento() {
         return dataDeNascimento;
     }
+
     public void setDataDeNascimento(String dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
+
     public String getEmail() {
         return email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
+
     public String getSenha() {
         return senha;
     }
+
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
     public String getTelefone() {
         return telefone;
     }
+
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
     public String getEndereco() {
         return endereco;
     }
+
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     } 
+
+     public String toString(){
+        return "Nome: " + 
+             nome + 
+             "\nE-mail: " + email +
+             "\nCPF: " + cpf;   
+    }
 }

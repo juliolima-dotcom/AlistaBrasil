@@ -1,15 +1,35 @@
 package org.alistabrasil.models;
+import org.alistabrasil.Enum.StatusAlistamento;
 
 public class Alistamento {
 
-    private int idAlistamento;
+    private String idAlistamento;
     private String dataAlistamento;
-    private String status;
+    private StatusAlistamento status;
     private String observacoes;
+    private Usuario usuario;
     
-    public Alistamento(int idAlistamento, String dataAlistamento) {
+    
+    public Alistamento(String idAlistamento, String dataAlistamento, Usuario usuario) {
         this.idAlistamento = idAlistamento;
         this.dataAlistamento = dataAlistamento;
+        this.usuario = usuario;
+    }
+
+    public String getIdAlistamento() {
+        return idAlistamento;
+    }
+
+    public void setIdAlistamento(String idAlistamento) {
+        this.idAlistamento = idAlistamento;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public String getDataAlistamento() {
@@ -18,10 +38,10 @@ public class Alistamento {
     public void setDataAlistamento(String dataAlistamento) {
         this.dataAlistamento = dataAlistamento;
     }
-    public String getStatus() {
+    public StatusAlistamento getStatus() {
         return status;
     }
-    public void setStatus(String status) {
+    public void setStatus(StatusAlistamento status) {
         this.status = status;
     }
     public String getObservacoes() {
@@ -29,5 +49,17 @@ public class Alistamento {
     }
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
-    }   
+    } 
+
+
+    public String toString(Usuario user){
+        
+        return "Nome: " + user.getNome() +
+                "\nCPF: " + user.getCpf() + 
+                "\nE-mail: " + user.getEmail() + 
+                "\nID: " + idAlistamento + 
+                "\nData de alistamento: " + dataAlistamento + 
+                "\nStatus: " + status;
+                
+    }
 }

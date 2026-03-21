@@ -1,6 +1,7 @@
 package org.alistabrasil.models;
 
 public class Certificado {
+
     private String idCertificado;
     private String tipoCertificado;
     private String dataEmissao;
@@ -28,7 +29,13 @@ public class Certificado {
         return codigoAutenticado;
     }
 
-    
+    public String toString(){
 
-    
+        return "Numero de certificado: " + 
+        idCertificado + "\nTipo de certficado: " +
+        tipoCertificado + "Data de Emissão: " +
+        dataEmissao + "Código de autenticação: " + 
+        codigoAutenticado;
+        
+    }  
 }

@@ -44,4 +44,11 @@ public class InformacaoLegal {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     } 
+
+    public String toString(){
+        return "Título: " + 
+        titulo + "\nDescrição: " +
+        descricao + "\nCategoria: " +
+        categoria;
+    }
 }
